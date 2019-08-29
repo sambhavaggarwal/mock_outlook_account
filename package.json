@@ -1,0 +1,60 @@
+{
+  "name": "tle",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.22",
+    "@fortawesome/free-solid-svg-icons": "^5.10.2",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "@toast-ui/react-calendar": "^1.0.2",
+    "axios": "^0.18.0",
+    "bootstrap": "^4.3.1",
+    "moment": "^2.24.0",
+    "node-sass": "^4.12.0",
+    "rc-util": "^4.10.0",
+    "react": "^16.8.6",
+    "react-big-calendar": "^0.22.0",
+    "react-bootstrap": "^1.0.0-beta.10",
+    "react-bootstrap-sidebar": "0.0.1",
+    "react-chat-elements": "^10.7.1",
+    "react-dom": "^16.8.6",
+    "react-dropbox-chooser": "0.0.5",
+    "react-google-picker": "^0.1.0",
+    "react-keyed-file-browser": "^1.5.2",
+    "react-responsive-modal": "^4.0.1",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.0.1",
+    "react-simple-tree-menu": "^1.1.4",
+    "react-super-treeview": "^0.3.3",
+    "react-treebeard": "^3.2.4",
+    "redux": "^4.0.4",
+    "redux-persist": "^5.10.0",
+    "semantic-ui-react": "^0.87.3",
+    "tui-calendar": "^1.12.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "react-redux": "^7.1.1",
+    "shave": "^2.5.2"
+  }
+}

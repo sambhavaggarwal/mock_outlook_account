@@ -1,0 +1,12 @@
+// @import url('https://fonts.googleapis.com/css?family=Pacifico|Open+Sans:300,400,600');
+
+.scrollable.notes {
+  height: calc(100vh);
+  padding-bottom: 64px;
+  position: relative;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.content-container-notes {
+  background-color: rgb(241, 242, 241);
+}

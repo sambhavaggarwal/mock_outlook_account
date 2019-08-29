@@ -1,0 +1,10 @@
+.rbc-event{
+    &:hover{
+        background: rgb(0, 255, 21) !important;
+        right: 0 !important;
+        left: auto !important;
+        height: auto !important;
+        width: auto !important;
+        z-index: 1;
+    }
+}

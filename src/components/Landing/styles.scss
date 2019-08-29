@@ -1,0 +1,48 @@
+.landing {
+    background: #fa923f;
+    height: calc(100vh - 64px);
+    margin-top: 64px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.landing nav {
+    height: 100%;
+}
+
+.landing ul {
+    list-style: none;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 50%;
+    padding-bottom: 50%;
+  }
+  
+  .landing li {
+    justify-content: space-between;
+  }
+  
+  .landing a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 0.5rem;
+  
+  }
+  
+  .landing img:hover,
+  .landing img:active {
+    color: #888888;
+  }
+  
+  .landing a:hover,
+  .landing a:active {
+    color: #888888;
+  }
+  
+  .landing img {
+    background: 0%;
+    width: 30%;
+  }
