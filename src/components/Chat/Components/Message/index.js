@@ -1,8 +1,14 @@
 import React, { Component } from "react";
 import moment from "moment";
 import "./Message.css";
+import { connect } from "react-redux";
 
-export default class Message extends Component {
+// retrieves value of admin from redux store
+function mapStateToProps(state) {
+  return { isAdmin: state.isAdmin };
+}
+
+class Message extends Component {
   render() {
     const {
       data,
@@ -24,10 +30,9 @@ export default class Message extends Component {
           `${endsSequence ? "end" : ""}`
         ].join(" ")}
       >
-        {showTimestamp && <div className="timestamp">
-        {friendlyTimestamp}
-        </div>}
-        
+        {showTimestamp && <div className="timestamp">{friendlyTimestamp}</div>}
+        {this.props.isAdmin && data.id}
+
         {showName && (
           <div className="bubble-container">
             <div className="bubble-name">{currentAuthor}</div>
@@ -42,3 +47,5 @@ export default class Message extends Component {
     );
   }
 }
+
+export default connect(mapStateToProps)(Message);

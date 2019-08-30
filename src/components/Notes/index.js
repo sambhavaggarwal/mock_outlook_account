@@ -32,7 +32,9 @@ export default class FileBrowser extends React.Component {
               TLE document
             </AccordionChild>
             <Accordion name="Folder 2">
-              <AccordionChild>File 2</AccordionChild>
+              <AccordionChild url="https://drive.google.com/file/d/0B4rVCFYRjVWcYVRMT0RVZWc4M3c/view?usp=sharing">
+                File 2
+              </AccordionChild>
               <AccordionChild>File 3</AccordionChild>
               <AccordionChild>File 4</AccordionChild>
               <Accordion name="Folder 3">

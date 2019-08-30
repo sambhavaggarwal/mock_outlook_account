@@ -6,8 +6,6 @@ import events from "./events";
 import "./styles.scss";
 import * as dates from "react-big-calendar/lib/utils/dates"
 
-import EventComponent from "./eventComponent"
-
 const propTypes = {}
 
 // setup the localizer
@@ -25,7 +23,7 @@ let formats = {
       end,
       dates.eq(start, end, "month") ? "DD" : "MMMM DD",
       culture
-    )
+    ) + " " + local.format(end, "YYYY", culture)
 }
 
 export default class MyCalendar extends React.Component {

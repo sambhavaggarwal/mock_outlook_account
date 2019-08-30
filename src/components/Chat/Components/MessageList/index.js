@@ -17,7 +17,7 @@ export default class MessageList extends Component {
       messages: [],
       people: props.people,
       selected_id: props.selected_id,
-      date: new Date().getTime(),
+      date: new Date().getTime()
     };
 
     this.componentDidUpdate = this.componentDidUpdate.bind(this);
@@ -31,7 +31,6 @@ export default class MessageList extends Component {
   componentDidUpdate(prevProps) {
     if (prevProps.selected_id !== this.props.selected_id) {
       this.setState({ selected_id: this.props.selected_id }, () => {
-        console.log("test", this.state.selected_id);
         this.getMessages();
       });
     }
@@ -46,10 +45,6 @@ export default class MessageList extends Component {
     return result;
   }
 
-  handleMessageClick = (id) => {
-    console.log(id)
-  }
-
   getMessages = () => {
     const selected_id = this.state.selected_id;
     const date = this.state.date;
@@ -62,10 +57,9 @@ export default class MessageList extends Component {
               {
                 id: 1,
                 author: "no-one",
-                message:
-                  "You didn't write any messages",
+                message: "You didn't write any messages",
                 timestamp: date
-              },
+              }
             ]
           };
 
@@ -77,8 +71,7 @@ export default class MessageList extends Component {
               {
                 id: 1,
                 author: "Linda",
-                message:
-                  "this is a modified message",
+                message: "this is a modified message",
                 timestamp: this.addDays(date, 0, -5, 0, 0)
               },
               {
@@ -93,14 +86,14 @@ export default class MessageList extends Component {
                 author: "Sam",
                 message:
                   "Hello world! This is a long message that will hopefully get wrapped by our message bubble component! We will see how well it works.",
-                  timestamp: this.addDays(date, 0, 500, 2, 3)
+                timestamp: this.addDays(date, 0, 500, 2, 3)
               },
               {
                 id: 4,
                 author: "Linda",
                 message:
                   "It looks like it wraps exactly as it is supposed to. Lets see what a reply looks like!",
-                  timestamp: this.addDays(date, 0, 500, 5, 6)
+                timestamp: this.addDays(date, 0, 500, 5, 6)
               },
               {
                 id: 5,
@@ -593,21 +586,22 @@ export default class MessageList extends Component {
           data={current}
           showName={showName}
           currentAuthor={current.author}
-          // onClick={this.handleMessageClick(current.id)}
         />
       );
 
       // Proceed to the next message.
       i += 1;
     }
-
     return messages;
   }
 
   render() {
+    const messages = this.renderMessages();
     return (
-      <div className="message-list" id={this.props.id}>
-        <div className="message-list-container">{this.renderMessages()}</div>
+      <div className="message-list">
+        <div className="message-list-container">
+          {messages}
+        </div>
       </div>
     );
   }
