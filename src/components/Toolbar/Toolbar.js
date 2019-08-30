@@ -5,6 +5,12 @@ import DrawerToggleButton from "../SideDrawer/DrawerToggleButton";
 import "./Toolbar.css";
 import Button from "react-bootstrap/Button";
 import Modal from "./LoginModal/index.jsx";
+import {connect} from 'react-redux'
+
+// retrieves value of admin from redux store
+function mapStateToProps(state) {
+  return { isAdmin: state.isAdmin }
+}
 
 class toolbar extends React.Component {
   constructor(props) {
@@ -22,17 +28,13 @@ class toolbar extends React.Component {
     this.setState({ showLoginModal: false });
   };
 
-  handleChangeUsername = () => {
-    console.log("changed username!")
-  };
-
   render() {
     const showLoginModal = this.state.showLoginModal;
 
     let loginModal;
     if (showLoginModal) {
       loginModal = (
-        <Modal open={showLoginModal} closeModal={this.closeLoginModal} />
+        <Modal open={showLoginModal} isAdmin={this.props.isAdmin} closeModal={this.closeLoginModal} />
       );
     } else {
       loginModal = null;
@@ -68,4 +70,4 @@ class toolbar extends React.Component {
   }
 }
 
-export default toolbar;
+export default connect(mapStateToProps)(toolbar);

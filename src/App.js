@@ -32,7 +32,6 @@ class App extends React.Component {
   };
 
   render() {
-    const isAdmin = this.props.isAdmin;
     let backdrop;
 
     if (this.state.sideDrawerOpen) {
@@ -45,7 +44,6 @@ class App extends React.Component {
           {backdrop}
           <Toolbar
             drawerClickHandler={this.drawerToggleClickHandler}
-            isAdmin={isAdmin}
           />
           <SideDrawer show={this.state.sideDrawerOpen} />
           {routes.map((route, i) => (

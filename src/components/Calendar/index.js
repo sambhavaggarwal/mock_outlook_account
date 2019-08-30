@@ -53,9 +53,6 @@ export default class MyCalendar extends React.Component {
           popup
           formats={formats}
           getNow={() => new Date(new Date().getFullYear() + 10, 10, 10, 10, 0,)}
-          components={{
-            event: EventComponent
-          }}
           onSelectEvent={event => this.handleSelectedEvent(event)}
         />
       </div>

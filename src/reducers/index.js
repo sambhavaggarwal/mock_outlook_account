@@ -5,7 +5,13 @@ const initialState = {
 function rootReducer(state = initialState, action) {
     if (action.type === "LOGIN") {
         return Object.assign({}, state, {
-            isAdmin: !state.isAdmin,
+            isAdmin: true,
+        });
+    }
+
+    if (action.type === "LOGOUT") {
+        return Object.assign({}, state, {
+            isAdmin: false,
         });
     }
 
